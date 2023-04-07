@@ -1,0 +1,64 @@
+:root {
+    --cor-corpo-desktop: #8fbcb3;
+    --cor-corpo-tablet: #fce6a8;
+    --cor-corpo-mobile: #C4BDAF;
+    --cor-letra-desktop:  black;
+    --cor-letra-tablet: #8fbcb3;
+    --cor-borda-desktop: #788895;
+    --cor-borda-tablet: #aa6dc4;
+    --cor-fundo-desktop: white;
+    --cor-fundo-tablet: #E3CFF3;
+}
+
+* {
+    border: 0;
+}
+
+html {
+    width: 98vw;
+    height: 96vh;
+}
+
+body {
+    width: 98vw;
+    height: 96vh;
+    display: flex;
+    background-color: var(--cor-corpo-desktop);
+    justify-content:center;
+    align-items: flex-start;
+}
+
+.card {
+    color: var(--cor-letra-desktop);
+    padding: 20px;
+    background-color: var(--cor-fundo-desktop);
+    border: solid var(--cor-borda-desktop) 2px;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1007px) {
+    body {
+        display: flex;
+        background-color: var(--cor-corpo-tablet);
+        justify-content:center;
+        align-items: center;
+    }    
+    
+    .card {
+        color: var(--cor-letra-tablet);
+        background-color: var(--cor-fundo-tablet);
+        border: solid var(--cor-borda-tablet) 2px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    body {
+        background-color: var(--cor-corpo-mobile);
+    }    
+    
+    .card {
+        display: none;
+    }
+}
